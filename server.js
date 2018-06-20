@@ -4,11 +4,18 @@ const db = require('./pokedex.json');
 
 
 
-const fn = require('./function.js');
-//const pokeevol = require('./pokeevol.js');
-// const pokeinfo =require('./pokeinfo.js');
+//const fn = require('./function.js');
 
-//yaha se 
+
+
+function findPokemonByName(name) {
+  const data = db.find(p => p.name.toLowerCase() === name.toLowerCase());
+  if (!data) {
+    return null;
+  }
+  return data;
+};
+
 
 function getPokemonEvolutions(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
@@ -95,7 +102,7 @@ function getPokemonInformations(req, res) {
 
 
 
-//yaha tak
+
 
 const app = express();
 app.use(bodyParser.json());
