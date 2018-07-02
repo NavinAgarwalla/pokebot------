@@ -89,7 +89,7 @@ function getPokemonInformations(req, res) {
     res.json({
       replies: [
        
-        {type:'text', content: navin2},
+        {type:'text', content: navin1},
         { type: 'text', content: `🔎${pokemonInfos.name} infos` },
         { type: 'text', content: `Type(s): ${pokemonInfos.types.join(' and ')}` },
         { type: 'text', content: pokemonInfos.description },
