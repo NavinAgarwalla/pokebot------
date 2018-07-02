@@ -85,6 +85,7 @@ function getPokemonInformations(req, res) {
   } else {
     res.json({
       replies: [
+        { type:'text', content:conversation.memory.pokemon}
         { type: 'text', content: `🔎${pokemonInfos.name} infos` },
         { type: 'text', content: `Type(s): ${pokemonInfos.types.join(' and ')}` },
         { type: 'text', content: pokemonInfos.description },
@@ -120,6 +121,5 @@ app.post('/errors', function (req, res) {
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log("pokemon");
-  console.log(req.body.conversation.memory.pokemon);
+ 
 	console.log(`App is listening on port ${PORT}`);});
