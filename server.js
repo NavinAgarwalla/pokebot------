@@ -76,7 +76,6 @@ function getPokemonInformations(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
   const pokemonInfos = findPokemonByName(pokemon.value);
   
-  const navin=req.body.conversation.memory.pronoun.person;
 
   if (!pokemonInfos) {
     res.json({
@@ -87,8 +86,6 @@ function getPokemonInformations(req, res) {
   } else {
     res.json({
       replies: [
-       
-        {type:'text', content: navin},
         { type: 'text', content: `🔎${pokemonInfos.name} infos` },
         { type: 'text', content: `Type(s): ${pokemonInfos.types.join(' and ')}` },
         { type: 'text', content: pokemonInfos.description },
