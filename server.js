@@ -76,7 +76,7 @@ function getPokemonInformations(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
   const pokemonInfos = findPokemonByName(pokemon.value);
   
-  const navin=req.body.conversation.memory.pokemon.raw;
+  const navin=req.body.conversation.memory.pronoun.person;
 
   if (!pokemonInfos) {
     res.json({
