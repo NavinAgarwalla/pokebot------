@@ -19,7 +19,8 @@ function findPokemonByName(name) {
 
 function getPokemonEvolutions(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
-  console.log(pokemon);
+
+  console.log("pokemon");
   console.log(req.body.conversation.memory.pokemon);
   const pokemonInfos = findPokemonByName(pokemon.value);
 
