@@ -85,7 +85,7 @@ function getPokemonInformations(req, res) {
   } else {
     res.json({
       replies: [
-        { type:'text', content:conversation.memory.pokemon}
+        { type:'text', content:conversation.memory.pokemon},
         { type: 'text', content: `🔎${pokemonInfos.name} infos` },
         { type: 'text', content: `Type(s): ${pokemonInfos.types.join(' and ')}` },
         { type: 'text', content: pokemonInfos.description },
