@@ -75,7 +75,7 @@ function formatEvolutionString(evolution) {
 function getPokemonInformations(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
   const pokemonInfos = findPokemonByName(pokemon.value);
-  
+  console.log(pokemon);
 
   if (!pokemonInfos) {
     res.json({
