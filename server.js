@@ -17,7 +17,7 @@ function findPokemonByName(name) {
 };
 
 
-function getPokemonEvolutions(req, res) {
+/*function getPokemonEvolutions(req, res) {
   const pokemon = req.body.conversation.memory.pokemon;
 
   
@@ -68,7 +68,7 @@ function formatEvolutionString(evolution) {
     base += ` -> ${evolution.trigger_item}`;
   }
   return base;
-}
+}*/
 
 
 
@@ -112,7 +112,7 @@ app.use(bodyParser.json());
 
 // Load routes
 app.post('/pokemon-informations', getPokemonInformations);
-app.post('/pokemon-evolutions', getPokemonEvolutions);
+//app.post('/pokemon-evolutions', getPokemonEvolutions);
 app.post('/errors', function (req, res) {
   console.error(req.body);
   res.sendStatus(200);
